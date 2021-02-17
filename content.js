@@ -47,38 +47,52 @@ var strings = {
 
     //Page
     "Open as page": "Открыть как страницу",
-    
+
     //Editor
     //Blocks
-    "Text": "",
-    "Just start writing with plain text.": "",
+    "Text": "Текст",
+    "Just start writing with plain text.": "Начните печатать обычным текстом",
 
-    "Page": "",
-    "Embed a sub-page inside this page.": "",
+    "Page": "Страница",
+    "Embed a sub-page inside this page.": "Вставьте подстраницу в эту страницу",
 
-    "To-do list": "",
-    "Track tasks with a to-do list.": "",
+    "To-do list": "Список дел",
+    "Track tasks with a to-do list.": "Отслеживайте задачи с помощью списка дел",
 
-    "Heading 1": "",
-    "Big section heading.": "",
+    "Heading 1": "Заголовок 1",
+    "Big section heading.": "Большой заголовок раздела",
 
-    "Heading 2": "",
-    "Medium section heading.": "",
+    "Heading 2": "Заголовок 2",
+    "Medium section heading.": "Средний заголовок раздела",
 
-    "Heading 3": "",
-    "Small section heading.": "",
+    "Heading 3": "Заголовок 3",
+    "Small section heading.": "Маленький заголовок раздела",
+}
 
-    "": "",
-    "": "",
+function translateNode(node) {
+    if (node.innerHTML in strings) {
+        var translated = strings[node.innerHTML];
+        console.log(`[innerHTML] translating node, old value: "${node.innerHTML}", new value: "${translated}"`)
+        node.innerHTML = translated;
+    }
 
-    "": "",
-    "": "",
 
-    "": "",
-    "": "",
 
-    "": "",
-    "": "",
+    if (node.data in strings) {
+        if (node.data != null) console.log(`node data: ${node.data}`);
+        var translated = strings[node.data];
+        console.log(`[data] translating node, old value: "${node.data}", new value: "${translated}"`)
+        node.data = strings[node.data]
+    };
+
+
+
+    if (node.childNodes != null) {
+        var nodes = node.childNodes;
+        for (var i = 0; i < nodes.length; i++) {
+            translateNode(nodes[i]);
+        }
+    }
 }
 
 // Select the node that will be observed for mutations
@@ -89,39 +103,21 @@ const config = { attributes: true, childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
 const callback = function (mutationsList, observer) {
-    // Use traditional 'for loops' for IE 11
-    for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-            var spans = document.getElementsByTagName('span');
-            for (var i = 0; i < spans.length; i++) {
-                console.log(spans[i].innerHTML);
-                if (spans[i].innerHTML in strings) spans[i].innerHTML = strings[spans[i].innerHTML];
-            }
 
-            var divs = document.getElementsByTagName('div');
-            for (var i = 0; i < divs.length; i++) {
-                if (divs[i].innerHTML in strings) divs[i].innerHTML = strings[divs[i].innerHTML];
-
-                if (divs[i].firstChild != null) {
-                    //if (divs[i].firstChild.data) console.log(divs[i].firstChild.data);
-                if (divs[i].firstChild.data in strings) divs[i].firstChild.data = strings[divs[i].firstChild.data];
-                }
-
-                if (divs[i].lastChild != null) {
-                    //if (divs[i].lastChild.data) console.log(divs[i].lastChild.data);
-                if (divs[i].lastChild.data in strings) divs[i].lastChild.data = strings[divs[i].lastChild.data];
-                }
-            }
-        }
-        else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+    for (let mutation of mutationsList) {
+        for (let node of mutation.addedNodes) {
+            translateNode(node);
         }
     }
 };
 
 // Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback, {
+    childList: true, // наблюдать за непосредственными детьми
+    subtree: true,// и более глубокими потомками
+}
+);
 
 // Start observing the target node for configured mutations
 observer.observe(targetNode, config);
+
