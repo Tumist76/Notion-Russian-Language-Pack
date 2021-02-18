@@ -16,7 +16,8 @@ var strings = {
 
 
     //#region Login
-    "Log in": "Войти",
+    "Sign up": "Регистрация",
+    "Log in": "Вход",
 
     "Continue with Google": "Продолжить с Google",
     "Continue with Apple": "Продолжить с Apple",
@@ -35,6 +36,8 @@ var strings = {
 
     "Password": "Пароль",
     "Incorrect password.": "Неверный пароль.",
+    "Your login code was invalid, or expired.": "Ваш код неверен или истёк.",
+
     //#endregion
 
     //#region Settings
@@ -170,6 +173,7 @@ var strings = {
     "Views for": "Представления для",
     "Add a view": "Добавить представление",
     "Add a group": "Добавить группу",
+    "Wrap cells": "Перенос строки",
 
     //#region Views
     "Table": "Таблица",
@@ -426,8 +430,36 @@ var stringParts = {
     "Today at": "Сегодня в"
 }
 
+function isNoTranslate(node) {
+    //console.log(`Role: ${node.getAttribute("role")}`);
+    if (node.nodeType === 1 && node.hasAttribute("role") && node.getAttribute("role") == "button") {
+        //console.log('isNoTranslate');
+        return false;
+    }
+    return true;
+}
+
+function hasSomeParentTheClass(element, classname) {
+    if (element.classList && element.classList.contains('notranslate')) return true; 
+    return element.parentNode && hasSomeParentTheClass(element.parentNode, classname);
+}
 
 function translateNode(node) {
+    // if (node.nodeType === 1) {
+    //     console.log(node.classList);
+    //     console.log(node.innerText);
+    // }
+    // console.log(`node.classList.contains('notranslate'): ${node?.classList?.contains('notranslate')}`)
+    // console.log(`isNoTranslate(node): ${isNoTranslate(node)}`)
+    // console.log(`hasSomeParentTheClass(node, "notranslate"): ${hasSomeParentTheClass(node, "notranslate")}`)
+    if (node.nodeType === 1 && isNoTranslate(node) && hasSomeParentTheClass(node, "notranslate")) {
+        //console.log("this is page content, returning");
+        return;
+    }
+    // if (node.nodeType === 1 && ) {
+    //     console.log("returning because of the parent class");
+    //     return;
+    // }
     if (node.nodeType === 1 && node.hasAttribute("placeholder")) {
         translatePlaceholder(node);
         return;
@@ -437,7 +469,7 @@ function translateNode(node) {
         var translated = strings[node.innerHTML];
         console.log(`[innerHTML] translating node, old value: "${node.innerHTML}", new value: "${translated}"`)
         node.innerHTML = translated;
-    } 
+    }
     //else пока нафиг ломает кучу элементов
     // else {
     //     //console.log(`Searching stringParts for innerHTML: ${node.innerHTML}`);
@@ -470,12 +502,12 @@ function translateNode(node) {
 
 function translatePlaceholder(node) {
     let placeholderValue = node.getAttribute("placeholder");
-        console.log(`node placeholder: ${placeholderValue}`);
-        if (placeholderValue in placeholders) {
-            var translated = placeholders[placeholderValue];
-            console.log(`[placeholder] translating node, old value: "${placeholderValue}", new value: "${translated}"`)
-            node.setAttribute("placeholder", translated);
-        }
+    console.log(`node placeholder: ${placeholderValue}`);
+    if (placeholderValue in placeholders) {
+        var translated = placeholders[placeholderValue];
+        console.log(`[placeholder] translating node, old value: "${placeholderValue}", new value: "${translated}"`)
+        node.setAttribute("placeholder", translated);
+    }
 }
 
 // Select the node that will be observed for mutations
@@ -492,13 +524,13 @@ const callback = function (mutationsList, observer) {
             if (mutation.attributeName = "placeholder") continue;
             //console.log(`Mutated attribute: ${mutation.attributeName}`);
             translatePlaceholder(mutation.target);
-        } 
+        }
         console.log(`Mutated! Type: ${mutation.type}`);
         if (mutation.type == "childList") {
             for (let node of mutation.addedNodes) {
                 translateNode(node);
             }
-        } 
+        }
         if (mutation.type == "characterData") {
             translateNode(mutation.target);
         }
