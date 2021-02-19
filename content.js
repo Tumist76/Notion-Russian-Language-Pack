@@ -12,6 +12,7 @@ var strings = {
     "Upload": "Загрузить",
     "Link": "Ссылка",
     "Submit": "Отправить",
+    "Update": "Обновить",
     //#endregion
 
 
@@ -40,6 +41,26 @@ var strings = {
 
     //#endregion
 
+    //#region Onboarding
+
+    "Welcome to Notion": "Добро пожаловать в Notion",
+    "First things first, tell us a bit about yourself.": "Первым делом расскажите нам немного о себе",
+    "Set a password": "Установите пароль",
+    "You're currently logged in as ": "Сейчас вы вошли как ",
+    "Continue": "Продолжить",
+
+    "How are you planning to use Notion?": "Как вы планируете использовать Notion?",
+    "We’ll streamline your setup experience accordingly.": "Мы подготовим рабочую область под ваши задачи.",
+    "For myself": "Для себя",
+    "Write better. Think more clearly. Stay organized.": "Пишите лучше. Думайте яснее. Оставайтесь организованными.",
+    "Free for 1 person": "Бесплатно для одного человека",
+    "With my team": "С моей командой",
+    "Wikis, docs, tasks & projects, all in one place.": "Вики, документы, задачи и проекты - всё в одном месте.",
+    "Start for free": "Начните бесплатно",
+    "Take me to Notion": "Вперед, в Notion!",
+
+    //#endregion
+
     //#region Settings
 
     //Sections
@@ -49,12 +70,32 @@ var strings = {
     "Language & region": "Язык и регион",
     "Appearance": "Внешний вид",
     "Earn credit": "Заработать бонусы",
-    "Workspace": "Рабочее пространство",
+    "Workspace": "Рабочая область",
     "Members": "Участники",
     "Upgrade": "Улучшить тариф",
     "Plans": "Тарифы",
     "Billing": "Оплата",
     "Security & identity": "Безопасность и идентификация",
+
+    //#region 
+
+    "Account": "Аккаунт",
+    "Changes to account settings will apply to all of your workspaces.": "Настройки аккаунта будут применены ко всем вашим рабочим пространствам",
+    "Learn more.": "Узнать больше.",
+    "Photo": "Фото",
+    "Upload photo": "Загрузить фото",
+    "Personal info": "Персональная информация",
+    "Email": "Электронная почта",
+    "Change email": "Изменить почту",
+    "First name": "Имя",
+    "Last name": "Фамилия",
+    "You can set a permanent password if you don't want to use temporary login codes.": "Вы можете установить постоянный пароль, если не хотите использовать временные коды входа.",
+    "Change password": "Изменить пароль",
+    "Remove password": "Убрать пароль",
+    "Danger zone": "Опасная зона",
+    "Delete my account": "Удалить мой аккаунт",
+
+    //#endregion
 
     //#endregion
 
@@ -69,9 +110,10 @@ var strings = {
     "Favorites": "Избранное",
     "Trash": "Корзина",
     "New page": "Новая страница",
+    "Add a page": "Добавить страницу",
 
-    "You are currently a guest. To see all the workspace pages, ask an admin to upgrade you to a member.": "Сейчас вы являетесь гостем. Чтобы просмотреть все страницы рабочего пространства, попросите администратора повысить вас до участника.",
-    "Create a workspace": "Создать рабочее пространство",
+    "You are currently a guest. To see all the workspace pages, ask an admin to upgrade you to a member.": "Сейчас вы являетесь гостем. Чтобы просмотреть все страницы рабочей области, попросите администратора повысить вас до участника.",
+    "Create a workspace": "Создать рабочую область",
     //#endregion
 
     //#region Top toolbar
@@ -92,13 +134,22 @@ var strings = {
     "Show deleted pages": "Удалённые страницы",
     "Export": "Экспортировать",
     "PDF, HTML, Markdown": "PDF, HTML, Markdown",
-    "Merge with CSV": "Слить с CSV",
+    "Merge with CSV": "Объединить с CSV",
     "Rename": "Переименовать",
     "Edit property": "Изменить свойство",
     "Move to": "Переместить",
     "Move to ": "Переместить в ",
     "Private pages": "Личные страницы",
-    "Comment": "Прокомментировать",
+    "Comment": "Коммент",
+    "Turn into": "Превратить в",
+    "Turn into page": "Сделать страницей",
+    "Turn into inline": "Сделать встроенной",
+    "Add as sub-page": "Добавить как подстраницу",
+    "Caption": "Подпись",
+    "Wrap code": "Перенос строк",
+    "Dismiss": "Скрыть",
+    "Mention": "Упомянуть",
+    "Color": "Цвет",
 
     "Style": "Стиль",
     "Default": "Обычный",
@@ -180,7 +231,7 @@ var strings = {
     "Table with types to store and view any kind of structured data": "Таблица с типами для хранения и отображения любых структурированных данных",
     "Board": "Доска",
     "Kanban board, great for project planning and bug tracking": "Канбан доска, отлично подходит для построения плана проекта и отслеживания багов",
-    "Timeline": "Временная шкала",
+    "Timeline": "Таймлайн",
     "A timeline view, great for project scheduling and planning": "Временная шкала, отлично подходит для создания расписания и плана проекта",
     "Calendar": "Календарь",
     "Month view, for event planning and scheduling": "Представление по месяцам для планирования событий и построения расписагия",
@@ -282,6 +333,9 @@ var strings = {
     "Basic blocks": "Базовые блоки",
     "Inline": "Встроенные блоки",
     "Media": "Медиа",
+    "Database": "База данных",
+    "Embeds": "Встраиваемые блоки",
+    "Advanced blocks": "Продвинутые блоки",
 
     "Text": "Текст",
     "Just start writing with plain text.": "Начните печатать обычным текстом.",
@@ -337,6 +391,42 @@ var strings = {
     "Inline equation": "Встроенное уравнение",
     "Insert mathematical symbols in text.": "Вставляет математические символы в текст.",
 
+    "Table - Inline": "Таблица - встроенная",
+    "Create a table inline in this page.": "Создать таблицу на этой странице.",
+
+    "Board - Inline": "Доска - встроенная",
+    "Create a kanban board inline in this page.": "Создать канбан-доску на этой странице.",
+
+    "Gallery - Inline": "Галерея - встроенная",
+    "Create a gallery inline in this page.": "Создать галерею на этой странице.",
+
+    "List - Inline": "Список - встроенный",
+    "Create a list inline in this page.": "Создать список на этой странице.",
+
+    "Calendar - Inline": "Календарь - встроенный",
+    "Create a calendar inline in this page.": "Создать календарь на этой странице.",
+
+    "Timeline - Inline": "Таймлайн - Полная страница",
+    "Create a timeline inline in this page.": "Создать таймлайн на этой странице.",
+
+    "Table - Full page": "Таблица - Полная страница",
+    "Create a table as its own page.": "Создать таблицу на отдельной странице.",
+
+    "Board - Full page": "Доска - Полная страница",
+    "Create a kanban board as its own page.": "Создать канбан на отдельной странице.",
+
+    "Gallery - Full page": "Галерея - Полная страница",
+    "Create a gallery as its own page.": "Создать галерею на отдельной странице.",
+
+    "Calendar - Full page": "Календарь - Полная страница",
+    "Create a calendar as its own page.": "Создать календарь на отдельной странице.",
+
+    "Timeline - Full page": "Таймлайн - Полная страница",
+    "Create a timeline as its own page.": "Создать таймлайн на отдельной странице.",
+
+    "Create linked database": "Создать связанную базу данных",
+    "Create custom views for a database.": "Создать представление для базы данных.",
+
     "Image": "Изображение",
     "Upload or embed with a link.": "Загрузить или встроить со ссылкой.",
 
@@ -354,6 +444,8 @@ var strings = {
 
     "File": "Файл",
     "Upload or embed with a link.": "Загрузить или встроить со ссылкой.",
+
+
     //#endregion
 
     //#region Date-Time selector
@@ -412,7 +504,8 @@ var placeholders = {
     "Type to search...": "Введите запрос",
     "Enter your email address...": "Введите вашу почту",
     "Enter your password...": "Введите ваш пароль...",
-    "Paste login code": "Вставьте код регистрации",
+    //"Paste login code": "Вставьте код регистрации",
+
 
     "Add to another page...": "Добавить на другую страницу...",
     "Filter actions…": "Отфильтровать действия...",
@@ -431,17 +524,22 @@ var stringParts = {
 }
 
 function isNoTranslate(node) {
-    //console.log(`Role: ${node.getAttribute("role")}`);
-    if (node.nodeType === 1 && node.hasAttribute("role") && node.getAttribute("role") == "button") {
-        //console.log('isNoTranslate');
+    if (hasSomeParentTheAttribute(node, "role", "button")) {
+        console.log('isNoTranslate');
         return false;
     }
+
     return true;
 }
 
 function hasSomeParentTheClass(element, classname) {
-    if (element.classList && element.classList.contains('notranslate')) return true; 
+    if (element.classList && element.classList.contains(classname)) return true; 
     return element.parentNode && hasSomeParentTheClass(element.parentNode, classname);
+}
+
+function hasSomeParentTheAttribute(element, attributeName, attributeValue) {
+    if (element.nodeType === 1 && element.hasAttribute(attributeName) && element.getAttribute(attributeName) == attributeValue) return true; 
+    return element.parentNode && hasSomeParentTheAttribute(element.parentNode, attributeValue);
 }
 
 function translateNode(node) {
@@ -525,7 +623,7 @@ const callback = function (mutationsList, observer) {
             //console.log(`Mutated attribute: ${mutation.attributeName}`);
             translatePlaceholder(mutation.target);
         }
-        console.log(`Mutated! Type: ${mutation.type}`);
+        //console.log(`Mutated! Type: ${mutation.type}`);
         if (mutation.type == "childList") {
             for (let node of mutation.addedNodes) {
                 translateNode(node);
