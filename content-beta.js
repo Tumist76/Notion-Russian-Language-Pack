@@ -77,10 +77,10 @@ var strings = {
     "Billing": "Оплата",
     "Security & identity": "Безопасность и идентификация",
 
-    //#region Account
+    //#region 
 
     "Account": "Аккаунт",
-    "Changes to account settings will apply to all of your workspaces.": "Настройки аккаунта применяются ко всем вашим рабочим областям",
+    "Changes to account settings will apply to all of your workspaces.": "Настройки аккаунта будут применены ко всем вашим рабочим пространствам",
     "Learn more.": "Узнать больше.",
     "Photo": "Фото",
     "Upload photo": "Загрузить фото",
@@ -92,107 +92,11 @@ var strings = {
     "You can set a permanent password if you don't want to use temporary login codes.": "Вы можете установить постоянный пароль, если не хотите использовать временные коды входа.",
     "Change password": "Изменить пароль",
     "Remove password": "Убрать пароль",
-    "Support access": "Доступ для службы поддержки",
-    "Grant Notion support temporary access to your account so we can troubleshoot problems or recover content on your behalf. You can revoke access at any time.": "Дайте команде Notion временный доступ к вашему аккунту, чтобы мы могли разрешить проблемы или восстановить контент от вашего имени. Вы можете отозвать доступ в любое время.",
-    "Allow support access": "Разрешить доступ поддержке", //btn
-    "Revoke access": "Отозвать доступ", //btn
-    "Log out of all devices": "Выйти со всех устройств",
-    "You will be logged out of all other active sessions besides this one and will have to log back in.": "Вы завершите все остальные активные сессии кроме этой, и вам потребуется войти на этих устройствах снова.",
-    "Log out": "Выйти", //btn
-
-    "Your current email is ": "Ваша текущая электронная почта: ",
-    "Please enter your password.": "Пожалуйста, введите ваш пароль.",
-
     "Danger zone": "Опасная зона",
     "Delete my account": "Удалить мой аккаунт",
 
     //#endregion
 
-    //#region Notifications
-
-    "Notifications": "Уведомления",
-    "Mobile push notifications": "Мобильные push-уведомления",
-    "Receive push notifications on mentions and comments via your mobile app.": "Отправлять push-уведомления при упоминаниях и комментариях через мобильное приложение.",
-    "Email notifications": "Уведомления на почту",
-    "Receive email updates on mentions, comments, and edit digests for all the pages you have followed.": "Отправлять на почту сводки по упоминаниям, комментариям и изменениям для всех страниц, за которыми вы следите.",
-    "Always send email notifications": "Всегда отправлять уведомления на почту",
-    "Receive updates by email, even when you’re active on the app.": "Отправлять уведомления на почту даже во время использования приложения.",
-
-    //#endregion
-
-    //#region Connected apps
-
-    "Connected apps": "Подключённые приложения",
-    "Connect": "Подключить",
-    "Disconnect": "Отключить",
-    "Connect another account": "Подключить еще один аккаунт",
-
-    "Find and embed your files": "Находите и вставляйте ваши файлы",
-    "Import notebooks": "Импортируйте записные книжки",
-    "Import your boards": "Импортируйте ваши доски",
-    "Import tasks from boards and lists": "Импортируйте задачи из досок и списков",
-
-    //#endregion
-
-    //#region 
-
-    "English": "Русский",
-    "English (US)": 'Переведено расширением "Notion Russian Language Pack" с английского',
-    "Korean": "Корейский",
-    "Choose a language you'd like to use with Notion.": "Выберите язык, который бы хотели использовать с Notion",
-    "Start week on Monday": "Начинать неделю с понедельника",
-    "This will change how all calendars in your app look.": "Это изменит то, как выглядят все календари в приложении",
-
-    //#endregion
-
-    //#region Appearance
-
-    "Customize how Notion looks on your device.": "Измените внешний вид Notion на вашем устройстве",
-    "Use system setting": "Использовать настройки системы",
-    "Light": "Светлая тема",
-    "Dark": "Тёмная тема",
-
-    //#endregion
-
-    //#region Workspace
-
-    "Workspace settings": "Настройки рабочей области",
-    "Name": "Название",
-    "You can use your name or the name of your team. Keep it simple.": "Вы можете использовать своё имя или имя вашей команды.",
-    "Icon": "Иконка",
-    "Upload an image or pick an emoji. It will show up in your sidebar and notifications.": "Загрузите изображение или выберите эмодзи. Иконка будет отображаться в боковой панели и уведомлениях",
-    "Domain": "Домен",
-    "Export content": "Экспортировать контент",
-    "Export members": "Экспортировать участников",
-    "Export members as CSV": "Экспорт участников в формате CSV", //btn
-    "Delete entire workspace": "Удалить рабочую область",
-
-    //#endregion
-
-    //#endregion
-
-    //#region Side toolbar
-    "Quick Find": "Быстрый поиск",
-    "Settings": "Настройки",
-    "Settings & Members": "Настройки и участники",
-    "All Updates": "Все обновления",
-
-    "Shared": "Общие",
-    "Private": "Личные",
-    "Favorites": "Избранное",
-    "Trash": "Корзина",
-    "New page": "Новая страница",
-    "Add a page": "Добавить страницу",
-
-    "You are currently a guest. To see all the workspace pages, ask an admin to upgrade you to a member.": "Сейчас вы являетесь гостем. Чтобы просмотреть все страницы рабочей области, попросите администратора повысить вас до участника.",
-    "Create a workspace": "Создать рабочую область",
-    //#endregion
-
-    //#region Top toolbar
-    "Share": "Поделиться",
-    "Updates": "Обновления",
-    "Favorite": "В избранное",
-    "Favorited": "В избранном",
     //#endregion
 
     //#region Update menu
@@ -222,13 +126,6 @@ var strings = {
     "Merge with CSV": "Объединить с CSV",
     "Rename": "Переименовать",
     "Edit property": "Изменить свойство",
-    "Format date": "Формат даты",
-    "Hide property": "Скрыть свойство",
-    "Always show": "Всегда показывать",
-    "Hide when empty": "Скрывать когда пустое",
-    "Always hide": "Всегда скрывать",
-    "Duplicate property": "Дублировать свойство",
-    "Delete property": "Удалить свойство",
     "Move to": "Переместить",
     "Move to ": "Переместить в ",
     "Private pages": "Личные страницы",
@@ -242,12 +139,6 @@ var strings = {
     "Dismiss": "Скрыть",
     "Mention": "Упомянуть",
     "Color": "Цвет",
-    "Download": "Скачать",
-    "Replace": "Заменить",
-    "View original": "Открыть оригинал",
-    "Mention page": "Упомянуть страницу",
-    "Create bookmark": "Создать закладку",
-    "Create embed": "Встроить содержимое",
 
     "Style": "Стиль",
     "Default": "Обычный",
@@ -255,7 +146,7 @@ var strings = {
     "Mono": "Моно",
     "Small text": "Маленький текст",
     "Full width": "На всю ширину",
-    "Duplicate": "Дублировать",
+    "Duplicate": "Создать копию",
     "Import": "Импорт",
     "Customize page": "Изменить страницу",
     "Lock page": "Заблокировать страницу",
@@ -269,7 +160,7 @@ var strings = {
 
     "Allow editing": "Разрешить редактирование",
     "Allow comments": "Разрешить комментирование",
-    "Allow duplicate as template": "Разрешить дублирование в качестве шаблона",
+    "Allow duplicate as template": "Разрешить копирование в качестве шаблона",
     "Search engine indexing": "Индексирование поисковыми движками",
 
     "Based on ": "На основе ",
@@ -351,7 +242,6 @@ var strings = {
     "Insert right": "Вставить справа",
 
     //Properties type
-    "Title": "Название",
     "Basic": "Базовые",
     "Number": "Число",
     "Multi-select": "Множественный выбор",
@@ -369,12 +259,6 @@ var strings = {
     "Created by": "Кем создано",
     "Last edited time": "Время изменения",
     "Last edited by": "Кем изменено",
-    "Are you sure you want to delete this property?": "Вы уверены, что хотите удалить это свойство?",
-
-    //Multi-select options
-    "Configure options": "Изменить варианты",
-    "Select an option or create one": "Выберите вариант или создайте новый",
-
     //#endregion
 
     //#region Filters
@@ -395,26 +279,8 @@ var strings = {
     "Does not contain": "Не содержит",
     "Is empty": "Пустое",
     "Is not empty": "Не пустое",
-    "Is": "Равно",
-    "Is not": "Не равно",
-    "Starts with": "Начинается с",
-    "Ends with": "Заканчивается как",
-    "Is before": "До",
-    "Is after": "После",
-    "Is on or before": "В этот день или ранее",
-    "Is on or after": "В этот день или позднее",
-    "Is within": "В диапазоне",
-    "Today": "Сегодня",
-    "Tomorrow": "Завтра",
-    "Yesterday": "Вчера",
-    "One week ago": "Одну неделю назад",
-    "One week from now": "Через неделю",
-    "One month ago": "Один месяц назад",
-    "One month from now": "Через месяц",
-    "Exact date": "Точная дата",
-    "Select a person": "Выберите участника",
 
-    "Pick a person": "Выберите участника",
+    "Pick a person": "Выберите человека",
     "Me": "Меня",
     //#endregion
 
@@ -445,12 +311,6 @@ var strings = {
     "Reposition": "Переместить",
     "Save position": "Сохранить позицию",
 
-    "Restore version": "Восстановить",
-
-    "Embed video": "Встроить видео",
-    "Embed link": "Встроить ссылку",
-    "Choose a video": "Выбрать видео",
-
     //Cover dialog
     "Choose an image": "Выберите изображение",
     "Images wider than 1500 pixels work best.": "Изображения шире 1500 пикселей выглядят лучше всего.",
@@ -480,6 +340,117 @@ var strings = {
     "Database": "База данных",
     "Embeds": "Встраиваемые блоки",
     "Advanced blocks": "Продвинутые блоки",
+
+
+    //#endregion
+
+    //#region Date-Time selector
+    "Remind": "Напомнить",
+
+    "None": "Отключено",
+    "At time of event": "В момент начала события",
+    "5 minutes before": "За 5 минут до начала",
+    "10 minutes before": "За 10 минут до начала",
+    "15 minutes before": "За 15 минут до начала",
+    "30 minutes before": "За 30 минут до начала",
+    "1 hour before": "За 1 час до начала",
+    "2 hours before": "За 2 часа до начала",
+    "On day of event (9:00 AM)": "В день события (9:00)",
+    "1 day before (9:00 AM)": "За 1 день до события (9:00)",
+    "2 days before (9:00 AM)": "За 2 дня до события (9:00)",
+    "1 week before (9:00 AM)": "За 1 неделю до события (9:00)",
+
+    "End date": "Дата окончания",
+    "Include time": "Добавить время",
+    "Date format & timezone": "Формат даты и часовой пояс",
+
+    "Date format": "Формат даты",
+    "Full date": "Полная дата",
+    "Month/Day/Year": "Месяц/День/Год",
+    "Day/Month/Year": "День/Месяц/Год",
+    "Year/Month/Day": "Год/Месяц/День",
+    "Relative": "Относительный",
+
+    "Time format": "Формат времени",
+    "12 hour": "12 часов",
+    "24 hour": "24 часа",
+
+    "Timezone": "Часовой пояс",
+    //#endregion
+
+    //#endregion
+
+    //#Search
+    "Recent pages": "Недавние страницы",
+    "Open in a new tab": "Открыть в новой вкладке",
+    //#Tooltips
+    "Pin this page in your sidebar": "Закрепить эту страницу в боковом меню"
+}
+
+var placeholders = {
+    //#region Page
+    "Add a comment…": "Добавить комментарий...",
+    "Type '/' for commands": "Введите '/' для открытия панели команд",
+    "Untitled": "Без названия",
+    "Press Enter to continue with an empty page, or pick a template (↑↓ to select)": "Нажмите Enter, чтобы продолжить с пустой страницей, или выберите шаблон (↑↓ для выбора)",
+    "Empty": "Пусто",
+    "Add a description…": "Добавьте описание...",
+    //#endregion
+
+    "Type to search...": "Введите запрос",
+    "Enter your email address...": "Введите вашу почту",
+    "Enter your password...": "Введите ваш пароль...",
+    //"Paste login code": "Вставьте код регистрации",
+
+
+    "Add to another page...": "Добавить на другую страницу...",
+    "Filter actions…": "Отфильтровать действия...",
+
+    "Paste an image link…": "Вставьте ссылку на изображение...",
+    "Search for an image…": "Поиск по изображению...",
+    "Search for a person…": "Поиск по участнику...",
+    "Type something…": "Напишите что-нибудь...",
+    "Filter...": "Отфильтровать",
+    "Search for a page, or create a new one…": "Найдите страницу или создайте новую...",
+    "Add new page in…": "Добавить страницу в...",
+    "Value": "Значение",
+}
+
+var stringParts = {
+    "Today at": "Сегодня в"
+}
+
+var alwaysTranslate = {
+    "Press Enter to continue with an empty page, or ": "Нажмите Enter, чтобы продолжить с пустой страницей или ",
+    "create a template": "создайте шаблон",
+}
+
+var updateHeaders = {
+    " in ": " в ",
+    " and ": " и ",
+
+    " created ": " создал(а) ",
+    " edited ": " изменил(а) ",
+    " deleted ": " удалил(а) ",
+
+    " created view ": " создал(а) представление ",
+    " edited view ": " изменил(а) представление ",
+    " deleted view ": " удалил(а) представление ",
+
+    " created property ": " создал(а) свойство ",
+    " edited property ": " изменил(а) свойство ",
+    " deleted property ": " удалил(а) свойство ",
+
+    " updated permission for ": " обновил(а) разрешения для",
+
+    " commented in ": " прокомментировал(а) ",
+    " mentioned you in ": " упомянул(а) вас в ",
+    " locked ": " заблокировал(а) ",
+    " unlocked ": " разблокировал(а) ",
+}
+
+var buttons = {
+    //#region Blocks
 
     "Text": "Текст",
     "Just start writing with plain text.": "Начните печатать обычным текстом.",
@@ -599,132 +570,49 @@ var strings = {
     "Display a standalone math equation.": "Вставить уравнение отдельным блоком",
 
     "Template button": "Кнопка шаблона",
-    "Duplicate blocks with a click.": "Дублирование блока одним нажатием",
+    "Duplicate blocks with a click.": "Копии блока одним нажатием",
 
     "Breadcrumb": "Путь к странице",
     "Show the current page location.": "Показать путь к этой странице",
 
-
     //#endregion
 
-    //#region Date-Time selector
-    "Remind": "Напомнить",
+    //#region Side toolbar
+    "Quick Find": "Быстрый поиск",
+    "Settings": "Настройки",
+    "Settings & Members": "Настройки и участники",
+    "All Updates": "Все обновления",
 
-    "None": "Отключено",
-    "At time of event": "В момент начала события",
-    "5 minutes before": "За 5 минут до начала",
-    "10 minutes before": "За 10 минут до начала",
-    "15 minutes before": "За 15 минут до начала",
-    "30 minutes before": "За 30 минут до начала",
-    "1 hour before": "За 1 час до начала",
-    "2 hours before": "За 2 часа до начала",
-    "On day of event (9:00 AM)": "В день события (9:00)",
-    "1 day before (9:00 AM)": "За 1 день до события (9:00)",
-    "2 days before (9:00 AM)": "За 2 дня до события (9:00)",
-    "1 week before (9:00 AM)": "За 1 неделю до события (9:00)",
+    "Shared": "Общие",
+    "Private": "Личные",
+    "Favorites": "Избранное",
+    "Trash": "Корзина",
+    "New page": "Новая страница",
+    "Add a page": "Добавить страницу",
 
-    "End date": "Дата окончания",
-    "Include time": "Добавить время",
-    "Date format & timezone": "Формат даты и часовой пояс",
-
-    "Date format": "Формат даты",
-    "Full date": "Полная дата",
-    "Month/Day/Year": "Месяц/День/Год",
-    "Day/Month/Year": "День/Месяц/Год",
-    "Year/Month/Day": "Год/Месяц/День",
-    "Relative": "Относительный",
-
-    "Time format": "Формат времени",
-    "12 hour": "12 часов",
-    "24 hour": "24 часа",
-
-    "Timezone": "Часовой пояс",
+    "You are currently a guest. To see all the workspace pages, ask an admin to upgrade you to a member.": "Сейчас вы являетесь гостем. Чтобы просмотреть все страницы рабочей области, попросите администратора повысить вас до участника.",
+    "Create a workspace": "Создать рабочую область",
     //#endregion
 
+    //#region Top toolbar
+    "Share": "Поделиться",
+    "Updates": "Обновления",
+    "Favorite": "В избранное",
+    "Favorited": "В избранном",
     //#endregion
 
-    //#Search
-    "Recent pages": "Недавние страницы",
-    "Open in a new tab": "Открыть в новой вкладке",
-    //#Tooltips
-    "Pin this page in your sidebar": "Закрепить эту страницу в боковом меню",
+    //#region Share
 
-    //#region Dialogs
-    "Close": "Закрыть",
-    "Would you like to delete this comment?": "Вы действительно хотите удалить этот комментарий?"
-    //#endregion
-}
-
-var placeholders = {
-    //#region Page
-    "Add a comment…": "Добавить комментарий...",
-    "Type '/' for commands": "Введите '/' для открытия панели команд",
-    "Untitled": "Без названия",
-    "Press Enter to continue with an empty page, or pick a template (↑↓ to select)": "Нажмите Enter, чтобы продолжить с пустой страницей, или выберите шаблон (↑↓ для выбора)",
-    "Empty": "Пусто",
-    "Add a description…": "Добавьте описание...",
-    //#endregion
-
-    "Type to search...": "Введите запрос",
-    "Enter your email address...": "Введите вашу почту",
-    "Enter your password...": "Введите ваш пароль...",
-    //"Paste login code": "Вставьте код регистрации",
-
-
-    "Add to another page...": "Добавить на другую страницу...",
-    "Filter actions…": "Отфильтровать действия...",
-
-    "Paste an image link…": "Вставьте ссылку на изображение...",
-    "Search for an image…": "Поиск по изображению...",
-    "Search for a person…": "Поиск по участнику...",
-    "Type something…": "Напишите что-нибудь...",
-    "Filter...": "Отфильтровать",
-    "Search for a page, or create a new one…": "Найдите страницу или создайте новую...",
-    "Add new page in…": "Добавить страницу в...",
-    "Search for an option...": "Поиск по вариантам...",
-    "Value": "Значение",
-    "Password": "Пароль",
-}
-
-var stringParts = {
-    "Today at": "Сегодня в"
-}
-
-var alwaysTranslate = {
-    "Press Enter to continue with an empty page, or ": "Нажмите Enter, чтобы продолжить с пустой страницей или ",
-    "create a template": "создайте шаблон",
-
-    //Share
     "Share to web": "Открытый доступ",
     "Publish and share link with anyone": "Открывает доступ для всех по ссылке",
     "Full access": "Полный доступ",
     "Can edit": "Может редактировать",
     "Can comment": "Может комментировать",
     "Can view": "Может просматировать",
-}
 
-var updateHeaders = {
-    " in ": " в ",
-    " and ": " и ",
+    //#endregion
 
-    " created ": " создал(а) ",
-    " edited ": " изменил(а) ",
-    " deleted ": " удалил(а) ",
 
-    " created view ": " создал(а) представление ",
-    " edited view ": " изменил(а) представление ",
-    " deleted view ": " удалил(а) представление ",
-
-    " created property ": " создал(а) свойство ",
-    " edited property ": " изменил(а) свойство ",
-    " deleted property ": " удалил(а) свойство ",
-
-    " updated permission for ": " обновил(а) разрешения для",
-
-    " commented in ": " прокомментировал(а) ",
-    " mentioned you in ": " упомянул(а) вас в ",
-    " locked ": " заблокировал(а) ",
-    " unlocked ": " разблокировал(а) ",
 }
 
 function isNoTranslate(node) {
@@ -746,6 +634,11 @@ function hasClass(node, className) {
     return false;
 }
 
+function hasAttribute(node, attributeName, attributeValue) {
+    if (node.nodeType === 1 && node.hasAttribute(attributeName) && node.getAttribute(attributeName) == attributeValue) return true; 
+    return false;
+}
+
 function hasSomeParentTheAttribute(element, attributeName, attributeValue) {
     if (element.nodeType === 1 && element.hasAttribute(attributeName) && element.getAttribute(attributeName) == attributeValue) return true; 
     return element.parentNode && hasSomeParentTheAttribute(element.parentNode, attributeValue);
@@ -756,14 +649,14 @@ function translateByList(node, list) {
         var translated = list[node.innerHTML];
         console.log(`[${list.constructor.name}, innerHTML] translating node, old value: "${node.innerHTML}", new value: "${translated}"`)
         node.innerHTML = translated;
-        return;
+        return true;
     }
     if (node.data in list) {
         if (node.data != null) console.log(`node data: ${node.data}`);
         var translated = list[node.data];
         console.log(`[${list.constructor.name}, data] translating node, old value: "${node.data}", new value: "${translated}"`)
         node.data = translated;
-        return;
+        return true;
     };
     if (node.childNodes != null) {
         var nodes = node.childNodes;
@@ -771,19 +664,36 @@ function translateByList(node, list) {
             translateByList(nodes[i], list);
         }
     }
+    return false;
+}
+
+function translatePlaceholder(node) {
+    let placeholderValue = node.getAttribute("placeholder");
+    console.log(`node placeholder: ${placeholderValue}`);
+    if (placeholderValue in placeholders) {
+        var translated = placeholders[placeholderValue];
+        console.log(`[placeholder] translating node, old value: "${placeholderValue}", new value: "${translated}"`)
+        node.setAttribute("placeholder", translated);
+    }
 }
 
 
-
 function translateNode(node) {
-    if (node.nodeType === 1 && isNoTranslate(node) && (hasSomeParentTheClass(node, "notion-page-content") || hasSomeParentTheClass(node, "notion-page-block"))) {
+    if (node.nodeType === 1 
+        //&& isNoTranslate(node) 
+        && hasSomeParentTheClass(node, "notion-page-content") || hasSomeParentTheClass(node, "notion-page-block")) {
         //console.log("this is page content, returning");
         return;
     }
     //translateByList(node, alwaysTranslate);
     if (hasClass(node, "notion-activity-section-header")) {
-        //console.log(node.innerHTML);
-        translateByList(node, updateHeaders);
+        console.log(node.innerHTML);
+        if (translateByList(node, updateHeaders)) return;
+    }
+    if (hasAttribute(node, "role", "button")) { 
+        console.log("is a button!");
+        console.log(node.innerHTML);
+        if (translateByList(node, buttons)) return;
     }
     if (node.nodeType === 1 && node.hasAttribute("placeholder")) {
         // console.log(node.classList);
@@ -836,16 +746,6 @@ function translateNode(node) {
         for (var i = 0; i < nodes.length; i++) {
             translateNode(nodes[i]);
         }
-    }
-}
-
-function translatePlaceholder(node) {
-    let placeholderValue = node.getAttribute("placeholder");
-    console.log(`node placeholder: ${placeholderValue}`);
-    if (placeholderValue in placeholders) {
-        var translated = placeholders[placeholderValue];
-        console.log(`[placeholder] translating node, old value: "${placeholderValue}", new value: "${translated}"`)
-        node.setAttribute("placeholder", translated);
     }
 }
 
