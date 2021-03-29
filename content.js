@@ -738,17 +738,17 @@ function isNoTranslate(node) {
 
 
 function hasSomeParentTheClass(element, classname) {
-    if (element.classList && element.classList.contains(classname)) return true; 
+    if (element.classList && element.classList.contains(classname)) return true;
     return element.parentNode && hasSomeParentTheClass(element.parentNode, classname);
 }
 
 function hasClass(node, className) {
-    if (node.nodeType === 1 && node.classList && node.classList.contains(className)) return true; 
+    if (node.nodeType === 1 && node.classList && node.classList.contains(className)) return true;
     return false;
 }
 
 function hasSomeParentTheAttribute(element, attributeName, attributeValue) {
-    if (element.nodeType === 1 && element.hasAttribute(attributeName) && element.getAttribute(attributeName) == attributeValue) return true; 
+    if (element.nodeType === 1 && element.hasAttribute(attributeName) && element.getAttribute(attributeName) == attributeValue) return true;
     return element.parentNode && hasSomeParentTheAttribute(element.parentNode, attributeValue);
 }
 
@@ -778,7 +778,6 @@ function translateByList(node, list) {
 
 function translateNode(node) {
     if (node.nodeType === 1 && isNoTranslate(node) && (hasSomeParentTheClass(node, "notion-page-content") || hasSomeParentTheClass(node, "notion-page-block"))) {
-        //console.log("this is page content, returning");
         return;
     }
     //translateByList(node, alwaysTranslate);
@@ -793,38 +792,14 @@ function translateNode(node) {
         translatePlaceholder(node);
         return;
     }
-    // if (node.nodeType === 1) {
-    //     console.log(node.classList);
-    //     console.log(node.innerText);
-    // }
-    // console.log(`node.classList.contains('notranslate'): ${node?.classList?.contains('notranslate')}`)
-    // console.log(`isNoTranslate(node): ${isNoTranslate(node)}`)
-    // console.log(`hasSomeParentTheClass(node, "notranslate"): ${hasSomeParentTheClass(node, "notranslate")}`)
-    // if (node.nodeType === 1 && ) {
-    //     console.log("returning because of the parent class");
-    //     return;
-    // }
 
     if (node.innerHTML in strings) {
         var translated = strings[node.innerHTML];
         console.log(`[innerHTML] translating node, old value: "${node.innerHTML}", new value: "${translated}"`)
         node.innerHTML = translated;
     }
-    //else пока нафиг ломает кучу элементов
-    // else {
-    //     //console.log(`Searching stringParts for innerHTML: ${node.innerHTML}`);
-    //     Object.keys(stringParts).forEach(function(key) {
-    //         //
-    //         //logic();
-    //         //console.log(`Key: ${key}`);
-    //         if (node.innerHTML != null && node.innerHTML.includes(key)) {
-    //             let translated = stringParts[key];
-    //             console.log(`[stringParts, innerHTML] translating node, old value: "${node.innerHTML}", new value: "${translated}"`)
-    //             node.innerHTML = node.innerHTML.replace(key, translated);
-    //         }
-    //       });
-    // }
 
+    //Translates node text
     if (node.data in strings) {
         if (node.data != null) console.log(`node data: ${node.data}`);
         var translated = strings[node.data];
@@ -850,43 +825,50 @@ function translatePlaceholder(node) {
     }
 }
 
-// Select the node that will be observed for mutations
-const targetNode = document.getElementById('notion-app');
 
-// Options for the observer (which mutations to observe)
-const config = { attributes: true, childList: true, subtree: true };
+window.addEventListener('load', function () {
 
-// Callback function to execute when mutations are observed
-const callback = function (mutationsList, observer) {
+    // Select the node that will be observed for mutations
+    const targetNode = document.getElementById('notion-app');
 
-    for (let mutation of mutationsList) {
-        if (mutation.type == "attributes") {
-            if (mutation.attributeName = "placeholder") continue;
-            //console.log(`Mutated attribute: ${mutation.attributeName}`);
-            translatePlaceholder(mutation.target);
-        }
-        //console.log(`Mutated! Type: ${mutation.type}`);
-        if (mutation.type == "childList") {
-            for (let node of mutation.addedNodes) {
-                translateNode(node);
+    // Options for the observer (which mutations to observe)
+    const config = { attributes: true, childList: true, subtree: true };
+
+    // Callback function to execute when mutations are observed
+    const callback = function (mutationsList, observer) {
+
+        for (let mutation of mutationsList) {
+            if (mutation.type == "attributes") {
+                if (mutation.attributeName = "placeholder") continue;
+                //console.log(`Mutated attribute: ${mutation.attributeName}`);
+                translatePlaceholder(mutation.target);
             }
-        }
-        if (mutation.type == "characterData") {
-            translateNode(mutation.target);
-        }
+            //console.log(`Mutated! Type: ${mutation.type}`);
+            if (mutation.type == "childList") {
+                for (let node of mutation.addedNodes) {
+                    translateNode(node);
+                }
+            }
+            if (mutation.type == "characterData") {
+                translateNode(mutation.target);
+            }
 
+        }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback, {
+        childList: true, // наблюдать за непосредственными детьми
+        subtree: true,// и более глубокими потомками
+        attributeFilter: ['placeholder'],
+        characterData: true,
     }
-};
+    );
 
-// Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback, {
-    childList: true, // наблюдать за непосредственными детьми
-    subtree: true,// и более глубокими потомками
-    attributeFilter: ['placeholder'],
-    characterData: true,
-}
-);
+    if (targetNode != null) {
+        // Start observing the target node for configured mutations
+        observer.observe(targetNode, config);
+        translateNode(targetNode);
+    }
 
-// Start observing the target node for configured mutations
-observer.observe(targetNode, config);
-
+})
