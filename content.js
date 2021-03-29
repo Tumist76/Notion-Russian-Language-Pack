@@ -31,7 +31,7 @@ var strings = {
     "You can also ": "Вы также можете ",
     "continue with SAML SSO": "продолжить с SAML SSO",
 
-    "There is no existing account under this email address. We just sent you a temporary sign up code.": "На этот адрес электронной почты не зарегистирован ни один аккаунт. Мы только что отослали вам временный код для регистрации.",
+    "We just sent you a temporary sign up code. Please check your inbox and paste the sign up code below.": "Мы только что отправили вам временный код для регистрации. Проверьте вашу электронную почту и вставьте код в поле ниже.",
     "Please check your inbox.": "Пожалуйста, проверьте свою папку входящих писем.",
     "Sign up code": "Код регистрации",
 
@@ -162,6 +162,7 @@ var strings = {
     "Icon": "Иконка",
     "Upload an image or pick an emoji. It will show up in your sidebar and notifications.": "Загрузите изображение или выберите эмодзи. Иконка будет отображаться в боковой панели и уведомлениях",
     "Domain": "Домен",
+    "Export all workspace content": "Экспортировать всё содержимое рабочей области",
     "Export content": "Экспортировать контент",
     "Export members": "Экспортировать участников",
     "Export members as CSV": "Экспорт участников в формате CSV", //btn
@@ -668,7 +669,7 @@ var placeholders = {
     "Type to search...": "Введите запрос",
     "Enter your email address...": "Введите вашу почту",
     "Enter your password...": "Введите ваш пароль...",
-    //"Paste login code": "Вставьте код регистрации",
+    //"Paste login code": "Вставьте код регистрации", ЛОМАЛО ВСЁ
 
 
     "Add to another page...": "Добавить на другую страницу...",
@@ -725,6 +726,7 @@ var updateHeaders = {
     " mentioned you in ": " упомянул(а) вас в ",
     " locked ": " заблокировал(а) ",
     " unlocked ": " разблокировал(а) ",
+    "Reminder in ": "Напоминание в ",
 }
 
 function isNoTranslate(node) {
