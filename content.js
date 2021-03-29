@@ -736,6 +736,7 @@ function isNoTranslate(node) {
     return true;
 }
 
+
 function hasSomeParentTheClass(element, classname) {
     if (element.classList && element.classList.contains(classname)) return true; 
     return element.parentNode && hasSomeParentTheClass(element.parentNode, classname);
